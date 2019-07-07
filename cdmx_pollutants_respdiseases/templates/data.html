@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Data</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Fonts, icons -->
+  <link rel="stylesheet" href="../static/res/fontawesome-free/css/all.min.css" type="text/css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../static/css/style.css">
+
+</head>
+
+<body>
+
+  <!-- Navigation bar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a href="/">
+        <img class="navbar-brand" src="../static/images/google-panda-circular-symbol.svg"></img>
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="overview">Project Overview</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/data">Data</a>
+          </li>
+          <li class="nav-item activado">
+            <a class="nav-link" href="/visualizations">Visualizations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/team">Team</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('../static/images/data-science.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Data Sources and Cleaning</h1>
+            <!-- <span class="subheading">Pollutants and Respiratory Deseases</span> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!--datasets containers-->
+
+  <div class="container">
+    <div>
+      <br>
+      <h2>Respiratory Emergencies</h2>
+      Data obtained from Secretaría de Salud at: <a
+        href='http://www.dgis.salud.gob.mx/contenidos/basesdedatos/da_urgencias_gobmx.htmlmx.html'>http://www.dgis.salud.gob.mx/</a>
+      <br><br>
+      Year considered: 2016.
+      <br><br>
+      Every Dataset contains (among others) the following information for each individual case:
+      <ul>
+        <li>Mexican State</li>
+        <li>CLUES: Clave Única de Establecimientos de Salud</li>
+        <li>Sex of the patient</li>
+        <li>Age of the patient</li>
+        <li>Main cause of medical attention</li>
+      </ul>
+      <br>
+    </div>
+
+    <div>
+      <br>
+      <h2>Hospital ID</h2>
+      Clave Única de Establecimientos de Salud (CLUES)
+      <br>Data obtained from Secretaría de Salud at: <a
+        href='http://www.dgis.salud.gob.mx/contenidos/intercambio/clues_gobmx.html'>http://www.dgis.salud.gob.mx/</a>
+      <br><br>
+      Information on each Hospital: Name, address, certification status, etc.
+      <br>
+    </div>
+
+    <div>
+      <br><br>
+      <h2>International Clasification of Diseases</h2>
+      Data obtained from World Health Organization at: <a href='http://cie10.org/index.html'>http://cie10.org/</a>
+      <br><br>
+      Catalog of disease codes in order to cross-reference to each patient disease.
+      <br>
+    </div>
+
+
+
+    <div>
+      <br><br>
+      <h2>Mexico City Air Contaminant Concentrations</h2>
+      Data obtained from Gobierno de la Ciudad de México at: <a
+        href='http://www.aire.cdmx.gob.mx/default.php?opc=%27aKBhnmI=%27&opcion=Zg=='>http://www.aire.cdmx.gob.mx/</a>
+      <br><br>
+      Year considered: 2016.
+      <br><br>
+      Information Obtained:
+      <ul>
+        <li>Monitoring Station ID</li>
+        <li>Date</li>
+        <li>Hourly concentrations of: <ul>
+            <li>Ozone</li>
+            <li>Particulate Matter 10&micro;m</li>
+            <li>Particulate Matter 2.5&micro;m</li>
+            <li>Carbon Monoxide</li>
+            <li>Nitric Oxide</li>
+            <li>Nitric Dioxide</li>
+            <li>Nitric Oxide Pollutants</li>
+            <li>Sulfur Dioxide</li>
+          </ul>
+        </li>
+      </ul>
+      <br>
+    </div>
+
+    <div>
+      <br>
+      <h2>Monitoring Stations Catalog</h2>
+      Data obtained from Gobierno de la Ciudad de México at: <a
+        href='http://www.aire.cdmx.gob.mx/default.php?opc=%27aKBhnmI=%27&opcion=Zg=='>http://www.aire.cdmx.gob.mx/</a>
+      <br><br>
+      Catalog of Monitoring Stations including information on:
+      <ul>
+        <li>Station name and ID</li>
+        <li>Location</li>
+        <li>Contaminants monitored in each station</li>
+      </ul>
+      <br>
+    </div>
+
+    <div>
+      <br>
+      <h2>Parameters Catalog</h2>
+      Data obtained from Gobierno de la Ciudad de México at: <a
+        href='http://www.aire.cdmx.gob.mx/default.php?opc=%27aKBhnmI=%27&opcion=Zg=='>http://www.aire.cdmx.gob.mx/</a>
+      <br><br>
+      Catalog of Parameters including information on:
+      <ul>
+        <li>Contaminant name and ID</li>
+        <li>Unit of Concentration</li>
+      </ul>
+      <br>
+    </div>
+
+    <div>
+      <br>
+      <h2>Units Catalog</h2>
+      Data obtained from Gobierno de la Ciudad de México at: <a
+        href='http://www.aire.cdmx.gob.mx/default.php?opc=%27aKBhnmI=%27&opcion=Zg=='>http://www.aire.cdmx.gob.mx/</a>
+      <br><br>
+      Catalog of Units including description and ID of every unit.
+      <br>
+    </div>
+
+
+
+    <div class="row">
+      <div class="col-md-6">
+        <div id="dataset1" style="height: 250px;">
+          <img class="datasetimg1" src="static/images/CSVs.png"></img>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div id="dataset2" style="height: 250px;">
+          <img class="datasetimg2" src="static/images/notebooks.png"></img>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div id="dataset3" style="height: 1100px;">
+          <img class="datasetimg3" src="static/images/app2.png"></img>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <footer style="margin-top:50px; ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+        </div>
+
+
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body,html {
+    height: 50%;
+}
+
+#mapa {
+    height: 50%;
+}
+
+/* Used for townhalls.html & townhalls.css */
+.row{
+    height: 100%;
+}
+
+#mapa-townhalls {
+    height: 150%;
+    width: 100%;
+}
+
+.container {
+    padding-left: 50px;
+    margin-left: 50px;
+    height: 200%;
+}
+
+#pollutant-selector {
+    width: 20%;
+}
+
+.leaflet-container {
+    background-color:rgba(255,0,0,0.0);
+}
+
+
+header  {
+    margin-bottom:50px;
+    background:no-repeat center center;
+    background-color:#868e96;
+    background-attachment:scroll;
+    position:relative;
+    background-size:cover
+    }
+
+header.masthead .overlay {
+    position:absolute;
+    background-color:#292c4ede;
+    opacity:0.6;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%
+    }
+
+header.masthead .page-heading,header.masthead .post-heading,header.masthead .site-heading {
+    padding:200px 0 150px;
+    color:#fff  
+    }
+
+header.masthead_overview, header.masthead_plots {
+    position:absolute;
+    background-color:#f0f2f7;
+    opacity:0.5;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%
+}   
+
+header.masthead_overview, .overview_heading {
+    padding:80px 0 450px;
+    color:rgb(21, 20, 22);
+    text-align: center
+}
+
+header.masthead_plots, .plots_heading {
+    padding:80px 0 450px;
+    color:rgb(21, 20, 22);
+    text-align: center
+}
+
+article {
+    padding:200px 0 350px;
+    color:rgb(21, 20, 22);
+    text-align: justify;
+    background-color:#f0f2f7
+}
+
+
+
+@media only screen and (min-width:768px) {
+    header.masthead .page-heading,header.masthead .post-heading,header.masthead .site-heading {padding:200px 0}
+    }
+
+header.masthead .page-heading,header.masthead .site-heading {text-align:center}
+header.masthead .page-heading h1,header.masthead .site-heading h1{font-size:50px;margin-top:0}
+header.masthead .page-heading .subheading,header.masthead .site-heading .subheading {
+    font-size:20px;
+    font-style: italic;
+    font-weight:300;
+    line-height:1.1;
+    display:block;
+    margin:10px 0 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+@media only screen and (min-width:768px) {
+    header.masthead .page-heading h1,header.masthead .site-heading h1{font-size:60px}
+    header.masthead .post-heading h1{font-size:35px}
+    header.masthead .post-heading .meta,header.masthead .post-heading .subheading {
+        line-height:1.1;
+        display:block}
+    header.masthead .post-heading .subheading {
+        font-size:24px;
+        font-weight:600;
+        margin:10px 0 30px;
+        font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif
+    }
+    header.masthead .post-heading .meta {
+        font-size:20px;
+        font-weight:300;
+        font-style:italic;
+        font-family:Lora,'Times New Roman',serif
+    }
+    header.masthead .post-heading .meta a{color:#fff}
+}
+@media only screen and (min-width:768px) {
+    header.masthead .post-heading h1{font-size:55px}
+    header.masthead .post-heading .subheading{font-size:30px}
+}

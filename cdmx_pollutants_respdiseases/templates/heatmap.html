@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Contaminant map</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Fonts, icons -->
+  <link rel="stylesheet" href="../static/resources/fontawesome-free/css/all.min.css" type="text/css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../static/css/style.css">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
+  <!-- D3 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.2/d3.min.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+  <!-- Marker Cluster JS & CSS -->
+  <script type="text/javascript"
+    src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/style-heatmap.css">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+    integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+    crossorigin=""></script>
+
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a href="/">
+          <img class="navbar-brand" src="../static/images/google-panda-circular-symbol.svg"></img>
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="overview">Project Overview</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/data">Data</a>
+          </li>
+          <li class="nav-item activado">
+            <a class="nav-link" href="/visualizations">Visualizations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/team">Team</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('../static/images/pollutionmx.png')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Mexico City: Pollutants and Respiratory Diseases</h1>
+            <span class="subheading">Heatmaps of Contaminants and Diseases</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+  <div class="text-center" id='date-counter'>
+    <h5>January 1, 2016</h5>
+</div>
+<div class="leaflet-container">
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <h4 class="text-center" id='contaminant-name'>Ozone (O<sub>3</sub>)</h4>
+            <div id="contaminantMap"></div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <h4 class="text-center">Respiratory Emergencies</h4>
+            <div id="emergenciesMap"></div>
+        </div>
+    </div>
+</div>
+
+    <!-- Leaflet heatmap plugin-->
+    <script type="text/javascript" src="../static/js/leaflet-heat.js"></script>
+    <script type="text/javascript" src="../static/js/leaflet.extra-markers.min.js"></script>
+
+    <!-- API key -->
+    <script type="text/javascript" src="../static/js/config.js"></script>
+    <script type="text/javascript" src="../static/js/cdmx.js"></script>
+
+    <div class="form-inline">
+        <label for="contaminant">Select Contaminant</label>
+        <select id="selContaminant" onchange="getData(this.value)">
+            <option value="O3">Ozone (O3)</option>
+            <option value="PM10">Particulate Matter < 10&micro;m (PM<sub>10</sub>)</option>
+            <option value="PM10">Particulate Matter < 2.5&micro;m (PM<sub>2.5</sub>)</option>
+            <option value="CO">Carbon Monoxide (CO)</option>
+            <option value="NO">Nitric Oxide (NO)</option>
+            <option value="NO2">Nitrogen Dioxide (NO2)</option>
+            <option value="NOX">Nitrogen Oxide Pollutants (NOX)</option>
+            <option value="SO2">Sulfur Dioxide (SO2)</option>
+        </select>
+        <button id="button1" type="button" class="btn btn-primary">Start</button>
+        <button id="button2" type="button" class="btn btn-secondary">Stop</button>
+    </div>
+
+    </div>
+    <script type="text/javascript" src="../static/js/heatmap.js"></script>
+
+
+  <!-- Footer -->
+  <footer style="margin-top:50px; ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+        </div>
+
+
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

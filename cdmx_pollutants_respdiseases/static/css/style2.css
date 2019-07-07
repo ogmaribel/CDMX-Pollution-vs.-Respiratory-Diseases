@@ -1,0 +1,44 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#map{
+  height: 80%;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+
+.bar {
+  background-color: teal;
+  color: white;
+  scrollbar-highlight-color: antiquewhite
+}
+
+.nav-panda {
+  padding-right: 10px;
+}
+a:hover {
+  color: whitesmoke;
+}
+
+
+.dropdown-toggle {
+  box-align: right;
+}
+
+.navbar-toggler {
+box-align: right
+}
+
+.collapse.in{
+  display:block;
+}

@@ -1,0 +1,18 @@
+CVE_MUN:
+
+002: Azcapotzalco
+003: Coyoacan
+004: Cuajimalpa
+005: GAM
+006: Iztacalco
+007: Iztapalapa
+008: Mag Contreras
+009: Milpa Alta
+010: Alvaro Obregon
+011: Tlahuac
+012: Tlalpan
+013: Xoxhimilco
+014: Benito Juarez
+015: Cuauhtemoc
+016: Miguel Hidalgo
+017: V. Carranza
