@@ -13,3 +13,7 @@ To determine the effect of air pollution in Mexico City on respiratory health, p
 Historical pollution levels data was collected and analyzed as well
 
 Visualizations were created to show pollution levels across Mexico City municipalities and respiratory diseases incidence
+
+
+# Heroku Link
+https://cdmx-environmental-datavis.herokuapp.com
